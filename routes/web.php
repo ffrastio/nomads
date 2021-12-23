@@ -4,7 +4,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\TravelPackagesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +31,7 @@ Route::prefix('admin')
             ->name('dashboard');
         Route::resource('travel-packages', '\App\Http\Controllers\Admin\TravelPackagesController');
         Route::resource('gallery', '\App\Http\Controllers\Admin\GalleryController');
+        Route::resource('transaction', '\App\Http\Controllers\Admin\TransactionController');
     });
 
 Auth::routes(['verify' => true]);
